@@ -112,6 +112,8 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 I tried applying the heat window over multiple frames however the number of frames used should be chosen wisely as it depends how many frames to accumulate the heat map for compared the relative velocities of the vehicles around.
 
+I have got some false detection which can be removed by increasing the threshold for the heat map 
+
 Also in the pipeline i started the sliding windows with x = 400 which is not realistic as the car can be on the right lane or in the middle. However, this was chosen to decrease the runtime of the pipeline due to the short time constrain i have for the project.
 
 Finally, the detection of the cars is highly dependent on the Multi Scale Sliding windows. The overlapping between windows also is a big factor in the runtime of the code. I think a mix of Multi Scale windows with different sizes and least overlapping is the the best solution to make this code real time efficient.
